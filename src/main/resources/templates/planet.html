@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>The Star Wars API - Planet</title>
+</head>
+<body>
+<h1 th:text="${planetInfos.name}"></h1>
+<h3 th:text="|Population: ${planetInfos.population}|"></h3>
+<ul>
+    <li th:each="resident : ${planetInfos.residents}|">
+        <a th:href="${resident}" th:text="${resident}"></a>
+    </li>
+</ul>
+<a href="/">Go back</a>
+</body>
+</html>
